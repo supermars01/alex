@@ -1,0 +1,92 @@
+$browser-default-font-size: 64px !default;//变量的值可以根据自己需求定义
+@function pTr($px){//$px为需要转换的字号
+    @return $px / $browser-default-font-size * 1rem;
+}
+html,body{
+	width:100%;
+	height:100%;
+	font-family:'微软雅黑'
+}
+body{font-size:16px;}
+.wrap{
+	position:fixed;
+	left:0;
+	top:0;
+	right:0;
+	bottom:0;
+	background-image:url(../../images/bg2.png);
+	background-repeat:no-repeat;
+	background-size: cover;
+	background-position:center top;
+}
+.title{
+	position:absolute;
+	left:50%;
+	top:0;
+	margin-left:pTr(-105px);
+	width:pTr(219px);
+	height:pTr(73px);
+	background-image:url(../../images/aidaixian.png);
+	background-size:100%;
+	background-repeat:no-repeat;
+}
+.rb{
+	position:absolute;
+	left:50%;
+	top:50%;
+	width:pTr(480px);
+	height:pTr(744px);
+	color:#fff;
+	transform:translate(-50%,-50%);
+	background-image:url(../../images/redbag.png);
+	background-size:100%;
+	background-repeat:no-repeat;
+	padding-top:pTr(10px);
+	text-align:center;
+	&{
+		article{
+			width:pTr(345px);
+			height:auto;
+			margin:pTr(60px) auto 0;
+			padding:0 pTr(30px);
+			overflow:hidden;
+			text-align:center;
+			background-color:#fbee5f;
+			font-size:14px;
+			color:#000;
+			border-radius:pTr(13px);
+			&{
+				h1{font-size:26px;color:red;line-height:pTr(70px);margin-top:pTr(50px)}
+				h2{font-size:20px;line-height:pTr(50px);}
+				.icon{
+					width:pTr(127px);
+					height:pTr(127px);
+					background-image:url(../../images/p2-icon.png);
+					background-size:100%;
+					margin:pTr(15px) auto pTr(25px);
+				}
+				ul{
+					background-color:#fff;
+					padding:pTr(10px) 0;
+					&{
+						li{line-height:pTr(40px)}
+						.bold{color:#e01639}
+					}
+				}
+				a{
+					display:inline-block;
+					width:pTr(240px);
+					height:pTr(50px);
+					line-height:pTr(50px);
+					margin:pTr(20px) auto pTr(30px);
+					border-radius:pTr(10px);
+					border:0;
+					background-color:#df002c;
+					color:#fbed52;
+					font-size:16px;
+					font-weight:bold;
+				}
+			}
+		}
+	}
+}
