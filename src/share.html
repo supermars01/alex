@@ -11,11 +11,10 @@
     (function(doc, win) {
         var docEle = doc.documentElement,
             isIos = navigator.userAgent.match(/iphone|ipod|ipad/gi),
-            dpr = Math.min(win.devicePixelRatio, 3);
-        scale = 1,
-
+            dpr = Math.min(win.devicePixelRatio, 3),
+            scale = 1,
             resizeEvent = 'orientationchange' in window ? 'orientationchange' : 'resize';
-        docEle.dataset.dpr = dpr;
+            docEle.dataset.dpr = dpr;
 
         var metaEle = doc.createElement('meta');
         metaEle.name = 'viewport';
