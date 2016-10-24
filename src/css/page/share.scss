@@ -1,4 +1,4 @@
-$browser-default-font-size: 64px !default;//变量的值可以根据自己需求定义
+$browser-default-font-size: 75px !default;//变量的值可以根据自己需求定义
 @function pTr($px){//$px为需要转换的字号
     @return $px / $browser-default-font-size * 1rem;
 }
